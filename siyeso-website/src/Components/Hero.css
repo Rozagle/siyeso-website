@@ -1,0 +1,11 @@
+.hero {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    background-size: contain; /* Adjust the background size as needed */
+  }
+}

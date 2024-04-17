@@ -1,0 +1,42 @@
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
+import Navbar from './Navbar';
+
+function Hero() {
+  return (
+    <>
+
+      <div className="w-full h-[2064px] relative bg-white overflow-hidden tracking-[normal] leading-[normal] text-left text-mini text-gray font-inter">
+      <Navbar />
+
+        <section className="absolute top-[0px] left-[0px] w-[1440px] h-[900px]">
+          <img
+            className="absolute top-[90px] left-[0px] w-[1440px] h-[810px]"
+            alt=""
+            src="/rectangle-1339.svg"
+          />
+          <img
+            className="absolute top-[0px] left-[0px] w-[1440px] h-[810px] z-[1]"
+            alt=""
+            src="/rectangle-1335.svg"
+          />
+          <img
+            className="absolute top-[31px] left-[152px] w-[40.7px] h-[35px] object-contain z-[2]"
+            loading="lazy"
+            alt=""
+            src="/fotorai20240408115224-1-1-1@2x.png"
+          />
+          <img
+            className="absolute top-[67px] left-[768px] w-[473px] h-[485px] z-[2]"
+            loading="lazy"
+            alt=""
+            src="/logo-hero.svg"
+          />
+        </section>
+      </div>
+
+    </>
+  );
+}
+
+export default Hero;
