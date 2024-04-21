@@ -28,13 +28,14 @@ const navLink = [
         path: '#contact',
         key: 'contact'
     },
-
 ];
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [currentLanguage, setCurrentLanguage] = useState(localStorage.getItem('selectedLanguage') || 'en');
     const { t, i18n } = useTranslation();
+    const [selectLanguage, setSelectLanguage] = useState(false);
+
 
     useEffect(() => {
         i18n.changeLanguage(currentLanguage);
@@ -48,20 +49,36 @@ function Navbar() {
         i18n.changeLanguage(lng);
         setCurrentLanguage(lng);
         localStorage.setItem('selectedLanguage', lng);
-        setMenuOpen(false); // Close the dropdown after selecting language
+        setMenuOpen(false);
+        setIsSvgClicked(false);
+        setSelectLanguage(false);
     };
 
     const [isSvgClicked, setIsSvgClicked] = useState(false);
+    const [isSvg1Hovered, setIsSvg1Hovered] = useState(false);
 
     const handleClickSvg = () => {
         setIsSvgClicked(!isSvgClicked);
     };
+
+    const handleSvg1MouseEnter = () => {
+        setIsSvg1Hovered(true);
+    };
+
+    const handleSvg1MouseLeave = () => {
+        setIsSvg1Hovered(false);
+    };
+
+    const toggleSelectLanguage = () => {
+        setSelectLanguage(!selectLanguage);
+    };
+    // className="w-11 h-11 mr-2 rotate-[-4.99deg]" 
     return (
         <nav className="navbar bg-transparent absolute top-0 left-0 right-0 z-10">
-            <div className="navigationBar text-white flex justify-between items-center h-16 max-w-[1380px] mx-auto px-5 relative">
-                <div className="w-36 h-9 relative flex items-center">
-                    <img className="w-10 h-10 mr-2 rotate-[-4.99deg]" alt="" src="/siyeso-logo-nav.png" />
-                    <div className="text-lg font-semibold ">siyeso</div>
+            <div className="navigationBar text-white flex justify-between items-center h-16 max-w-[1450px] mx-auto px-5 relative ">
+                <div className="w-36 h-12 relative flex items-center">
+                    <img className="w-25 h-25 mr-2 " alt="" src="/siyeso-navv.svg" />
+                    {/* <div className="text-lg uppercase " style={{ fontFamily: "Arimo, sans-serif", fontWeight: 400 }}>siyeso</div> */}
                 </div>
 
                 {/* Menu Icon for Mobile screen */}
@@ -74,31 +91,40 @@ function Navbar() {
                 </div>
 
                 {/* Dropdown Menu for Mobile */}
-                <div className={`lg:hidden fixed mt-6 top-8 right-0 shadow w-56 bg-opacity-10 backdrop-blur-lg flex flex-col rounded-lg transition-all duration-500 ease-in-out transform ${menuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+                <div className={`lg:hidden fixed mt-6 top-8 right-0 items-center shadow w-58 bg-opacity-50 backdrop-blur-lg flex flex-col rounded-lg transition-all duration-500 ease-in-out transform ${menuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                     <ul className="menu py-2 text-sm dark:text-gray-900 capitalize" aria-labelledby="dropdownDefaultButton">
                         {navLink.map((item, index) => (
-                            <li key={index} className="menu_items p-2 text-center hover:text-blue-400">
-                                <a href={item.path} className="menu-link block px-4 py-2 hover:bg-gray-100 dark:hover:text-blue-400">{t(item.key)}</a>
+                            <li key={index} className="menu_items p-2 text-center">
+                                <a href={item.path} className="menu-link block space-y-2 hover:bg-gray-100 hover:text-blue-400 text-black py-2 px-14 mb-2 rounded">{t(item.key)}</a>
                             </li>
                         ))}
-                        <li onClick={() => changeLanguage(currentLanguage === 'en' ? 'tr' : 'en')} className="menu_items p-2 hover:text-blue-400 cursor-pointer">
-                            <span className="menu-link block px-4 py-2 text-center hover:bg-gray-100 dark:hover:text-blue-400">{currentLanguage === 'en' ? 'English' : 'Turkish'}</span>
-                        </li>
                     </ul>
+
+                    <button onClick={toggleSelectLanguage} className="btnmenu_items text-sm text-center">
+                        <h1 className=' block py-2 px-16 mb-2 space-y-2 rounded text-black text-center font-modern capitalize group-hover:bg-gray-100 group-hover:text-blue-400 hover:bg-gray-100 hover:text-blue-400'>Selecte language</h1>
+                    </button>
+
+                    {selectLanguage && (
+                        <ul className="menu text-sm dark:text-gray-900 capitalize text-center" aria-labelledby="dropdownDefaultButton">
+                            <li onClick={() => changeLanguage('en')} className='language_btn2 block space-y-2 hover:bg-gray-100 hover:text-blue-400 text-black py-2 px-20 mb-2 rounded'>English</li>
+                            <li onClick={() => changeLanguage('tr')} className='language_btn2 block space-y-2 hover:bg-gray-100 hover:text-blue-400 text-black py-2 px-20 mb-2 rounded'>Türkçe</li>
+                        </ul>
+                    )}
                 </div>
 
+
                 {/* Navbar links Large Screen */}
-                <ul className={`menu hidden lg:flex text-lg font-semibold capitalize ${menuOpen ? 'hidden' : ''}`}>
+                <ul className={`menu hidden lg:flex  text-center justify-center text-lg font-semibold capitalize ${menuOpen ? 'hidden' : ''}`} style={{ flexWrap: 'nowrap' }}>
                     {navLink.map((item, index) => (
-                        <li key={index} className="menu_items p-3 hover:dark:text-gray-900 ">
+                        <li key={index} className="menu_items pt-3 pr-2 hover:dark:text-gray-900 ">
                             <a href={item.path} className="menu-link p-6">{t(item.key)}</a>
                         </li>
                     ))}
 
                     {/* Language Dropdown for Large Screen */}
                     <div className="relative lg:flex hidden sm:hidden">
-                        <div className="flex items-center space-x-1" id="dropdown-container">
-                            <button onMouseEnter={() => { setMenuOpen(true); handleClickSvg(); }} className="focus:outline-none">
+                        <div className="flex items-center pt-1 space-x-1" id="dropdown-container">
+                            <button onClick={() => { setMenuOpen(true); handleClickSvg(); }} className="focus:outline-none">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -106,6 +132,8 @@ function Navbar() {
                                     strokeWidth={1.5}
                                     stroke="currentColor"
                                     className={`svg1 w-8 h-8 text-white hover:dark:text-gray-900 ${isSvgClicked ? 'clicked' : ''}`}
+                                    onMouseEnter={handleSvg1MouseEnter}
+                                    onMouseLeave={handleSvg1MouseLeave}
                                 >
                                     <path
                                         strokeLinecap="round"
@@ -121,27 +149,29 @@ function Navbar() {
                                 viewBox="0 0 24 24"
                                 strokeWidth={2.5}
                                 stroke="currentColor"
-                                className={`svg2 w-3 h-3 text-white hover:dark:text-gray-900  ${isSvgClicked ? 'rotate-180 ' : ''}`}
+                                className={`svg2 w-3 h-3 text-white hover:dark:text-gray-900 ${isSvgClicked ? 'rotate-180 ' : ''} ${isSvg1Hovered ? 'dark:text-gray-900' : ''}`}
                             >
                                 <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                             </svg>
+                            {/* Language menu Dropdown */}
+                            <div className="lg:inline hidden sm:hidden items-center justify-center">
+                                <div className={`languagedp fixed mt-6 top-8 right-48 w-68 lg:right-32 items-center justify-center bg-white flex flex-col rounded-lg transition-all duration-500 ease-in-out transform ${menuOpen ? '' : 'hidden'}`}>
+                                    <div className='mt-6 top-8 right-48 w-56 bg-white flex flex-col rounded-lg' id='divlan' style={{ padding: '10px', margin: '10px' }}>
+                                        <h1 className='mb-4 text-black text-center font-modern capitalize'>Selected language</h1>
+                                        <button onClick={() => changeLanguage('en')} className='language_btn2 lg:inline space-y-2 hidden bg-gray-100 sm:hidden hover:text-blue-400 text-black font-bold py-2 px-4  mb-2 rounded'>English</button>
+                                        <button onClick={() => changeLanguage('tr')} className='language_btn2 lg:inline space-y-2 hidden bg-gray-100 sm:hidden hover:text-blue-400 text-black font-bold py-2 px-4  mb-2 rounded'>Türkçe</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button onChange={toggleMenu} className='language_btn2 lg:inline hidden sm:hidden hover:bg-blue-400 text-white font-bold py-2 px-4 rounded'>{currentLanguage === 'en' ? 'English' : 'Türkçe'}</button>
                         </div>
                     </div>
-                    <button onChange={toggleMenu} className='language_btn2 lg:inline hidden sm:hidden hover:bg-blue-400 text-white font-bold py-2 px-4 rounded'>{currentLanguage === 'en' ? 'English' : 'Turkish'}</button>
                 </ul>
-
-                {/* Language menu Dropdown */}
-                <div className="lg:inline hidden sm:hidden">
-                    <button className="lg:hidden sm:hidden" onClick={() => setMenuOpen(true)}></button>
-                    <div className={`languagedp fixed mt-6 top-8 right-48 shadow w-56 bg-opacity-20 backdrop-blur-lg flex flex-col rounded-lg transition-all duration-500 ease-in-out transform ${menuOpen ? '' : 'hidden'}`}>
-                        <button onClick={() => changeLanguage('en')} className='language_btn2 lg:inline hidden sm:hidden hover:bg-blue-400 text-white font-bold py-2 px-4 rounded'>English</button>
-                        <button onClick={() => changeLanguage('tr')} className='language_btn2 lg:inline hidden sm:hidden hover:bg-blue-400 text-white font-bold py-2 px-4 rounded'>Turkish</button>
-                    </div>
-                </div>
             </div>
+
         </nav>
     );
 }
 
 export default Navbar;
-

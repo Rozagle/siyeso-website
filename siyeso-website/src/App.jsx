@@ -1,13 +1,14 @@
-import { Navbar, Hero, Team, Contect } from './Components/Imports';
+import { Navbar, Hero, Client, Team, Contect } from './Components/Imports';
+
 function App() {
+
   return (
     <>
       <Navbar />
       <Hero />
+      <Client/>
       <Team />
       <Contect />
-
-
     </>
   );
 }

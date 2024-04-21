@@ -4,5 +4,13 @@
     "our_expertise": "Our Expertise",
     "reference": "Reference",
     "team": "Team",
-    "contact": "Contact"
-}
+    "contact": "Contact",
+    
+    "left_side_hero": {
+      "heading": "One-step solutions for your projects?",
+      "subheading": "All in one platform",
+      "description": "Software companies are tech innovators, crafting and delivering solutions to streamline processes and transform industries. With agile teams of skilled professionals.",
+      "button_text": "Learn more"
+    }
+  }
+  

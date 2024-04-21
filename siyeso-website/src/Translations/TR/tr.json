@@ -4,5 +4,13 @@
     "our_expertise": "Uzmanlık Alanlarımız",
     "reference": "Referanslar",
     "team": "Ekip",
-    "contact": "İletişim"
-}
+    "contact": "İletişim",
+
+    "left_side_hero": {
+      "heading": "Projeleriniz için tek adımda çözümler?",
+      "subheading": "Tek bir platformda",
+      "description": "Yazılım şirketleri, süreçleri optimize etmek ve endüstrileri dönüştürmek için çözümler üreten ve sunan teknoloji yenilikçileridir. Yetenekli profesyonellerden oluşan çevik ekiplerle.",
+      "button_text": "Keşf et"
+    }
+  }
+  
