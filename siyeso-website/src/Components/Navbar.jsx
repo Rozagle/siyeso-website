@@ -33,7 +33,6 @@ const navLink = [
 function Navbar() {
     const [menuOpenDesk, setMenuOpenDesk] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
-
     const [currentLanguage, setCurrentLanguage] = useState(localStorage.getItem('selectedLanguage') || 'en');
     const { t, i18n } = useTranslation();
     const [selectLanguage, setSelectLanguage] = useState(false);
@@ -44,7 +43,6 @@ function Navbar() {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
                 setMenuOpenDesk(false);
                 setIsSvgClicked(false);
-
             }
         }
 
@@ -57,6 +55,7 @@ function Navbar() {
     useEffect(() => {
         function handleScroll() {
             setMenuOpenDesk(false);
+            setMenuOpen(false);
             setIsSvgClicked(false);
         }
 

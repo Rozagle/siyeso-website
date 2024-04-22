@@ -11,6 +11,11 @@
       "subheading": "All in one platform",
       "description": "Software companies are tech innovators, crafting and delivering solutions to streamline processes and transform industries. With agile teams of skilled professionals.",
       "button_text": "Learn more"
+    },
+    "analysis-container": {
+      "heading": "DATA ANALYSIS",
+      "h1": "We analyze your business and provide you with the best solution",
+      "description":"Empower your organization with our centralized data analysis hub. Our platform offers a suite of tools for gathering, organizing, and analyzing data, providing actionable insights for informed decision-making. Optimize workflows, enhance collaboration, and unlock the full potential of your data analysis efforts."
     }
   }
   

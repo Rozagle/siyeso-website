@@ -11,6 +11,12 @@
       "subheading": "Tek BİR platformda",
       "description": "Yazılım şirketleri, süreçleri optimize etmek ve endüstrileri dönüştürmek için çözümler üreten ve sunan teknoloji yenilikçileridir. Yetenekli profesyonellerden oluşan çevik ekiplerle.",
       "button_text": "Keşf et"
+    },
+    "analysis-container": {
+      "heading": "VERİ ANALİZİ",
+      "h1": "İşinizi analiz ediyor ve size en iyi çözümü sunuyoruz",
+      "description":"Merkezi veri analizi merkezimizle kuruluşunuzu güçlendirin. Platformumuz, veri toplama, düzenleme ve analiz için bir dizi araç sunar, bilinçli karar verme için işe yarar içgörüler sağlar. İş akışlarını optimize edin, işbirliğini artırın ve veri analizi çabalarınızın tam potansiyelini açığa çıkarın."
     }
+
   }
   
