@@ -1,4 +1,4 @@
-import { Navbar, Hero, Client, Team, Contect } from './Components/Imports';
+import { Navbar, Hero, Analysis, Client, Team, Contect } from './Components/Imports';
 
 function App() {
 
@@ -6,7 +6,8 @@ function App() {
     <>
       <Navbar />
       <Hero />
-      <Client/>
+      <Analysis />
+      <Client />
       <Team />
       <Contect />
     </>

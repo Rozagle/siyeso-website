@@ -16,7 +16,7 @@ function Hero() {
         <div className="left-side lg:w-3/5 md:w-1/2 flex flex-col justify-center text-center md:text-left px-16 lg:pb-32 md:pb-28">
 
           <p className=" text-3xl pb-2 md:text-2xl text-opacity-50 uppercase" style={{ fontFamily: "Arimo, sans-serif", fontWeight: 400 }}>{t('left_side_hero.subheading')}</p>
-          <h1 className='text-2xl md:text-3xl font-bold mb-4 pb-2'>
+          <h1 className='text-2xl md:text-3xl font-bold mb-2'>
             {t('left_side_hero.heading')}
           </h1>
           <p className=" lg:text-xl mb-6 md:text-lg">
@@ -30,7 +30,7 @@ function Hero() {
         </div>
         {/* Right-side Hero */}
         <div className="right-side md:w-1/2 flex ">
-          <img src={herologo} alt="" className="lg:w-3/6 md:w-3/5 h-auto lg:mb-80 lg:ml-32 md:mb-80 md:ml-30" />
+          <img src={herologo} alt="" className="lg:w-2/4 md:w-3/5 h-auto lg:mb-80 lg:ml-32 md:mb-80 md:ml-30" />
         </div>
       </div>
     </>

@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { IoMenuOutline, IoClose } from "react-icons/io5";
 import { useTranslation } from 'react-i18next';
 
@@ -31,15 +31,46 @@ const navLink = [
 ];
 
 function Navbar() {
+    const [menuOpenDesk, setMenuOpenDesk] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
+
     const [currentLanguage, setCurrentLanguage] = useState(localStorage.getItem('selectedLanguage') || 'en');
     const { t, i18n } = useTranslation();
     const [selectLanguage, setSelectLanguage] = useState(false);
+    const dropdownRef = useRef(null);
 
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setMenuOpenDesk(false);
+                setIsSvgClicked(false);
+
+            }
+        }
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
+    useEffect(() => {
+        function handleScroll() {
+            setMenuOpenDesk(false);
+            setIsSvgClicked(false);
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     useEffect(() => {
         i18n.changeLanguage(currentLanguage);
     }, [currentLanguage, i18n]);
+
+
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -49,7 +80,7 @@ function Navbar() {
         i18n.changeLanguage(lng);
         setCurrentLanguage(lng);
         localStorage.setItem('selectedLanguage', lng);
-        setMenuOpen(false);
+        setMenuOpenDesk(false);
         setIsSvgClicked(false);
         setSelectLanguage(false);
     };
@@ -72,13 +103,13 @@ function Navbar() {
     const toggleSelectLanguage = () => {
         setSelectLanguage(!selectLanguage);
     };
-    // className="w-11 h-11 mr-2 rotate-[-4.99deg]" 
+
+
     return (
         <nav className="navbar bg-transparent absolute top-0 left-0 right-0 z-10">
             <div className="navigationBar text-white flex justify-between items-center h-16 max-w-[1450px] mx-auto px-5 relative ">
                 <div className="w-36 h-12 relative flex items-center">
                     <img className="w-25 h-25 mr-2 " alt="" src="/siyeso-navv.svg" />
-                    {/* <div className="text-lg uppercase " style={{ fontFamily: "Arimo, sans-serif", fontWeight: 400 }}>siyeso</div> */}
                 </div>
 
                 {/* Menu Icon for Mobile screen */}
@@ -114,7 +145,7 @@ function Navbar() {
 
 
                 {/* Navbar links Large Screen */}
-                <ul className={`menu hidden lg:flex  text-center justify-center text-lg font-semibold capitalize ${menuOpen ? 'hidden' : ''}`} style={{ flexWrap: 'nowrap' }}>
+                <ul className={`menu hidden lg:flex  text-center justify-center text-lg font-semibold capitalize ${menuOpenDesk ? 'hidden' : ''}`} style={{ flexWrap: 'nowrap' }}>
                     {navLink.map((item, index) => (
                         <li key={index} className="menu_items pt-3 pr-2 hover:dark:text-gray-900 ">
                             <a href={item.path} className="menu-link p-6">{t(item.key)}</a>
@@ -122,9 +153,9 @@ function Navbar() {
                     ))}
 
                     {/* Language Dropdown for Large Screen */}
-                    <div className="relative lg:flex hidden sm:hidden">
+                    <div ref={dropdownRef} className="relative lg:flex hidden sm:hidden">
                         <div className="flex items-center pt-1 space-x-1" id="dropdown-container">
-                            <button onClick={() => { setMenuOpen(true); handleClickSvg(); }} className="focus:outline-none">
+                            <button onClick={() => { setMenuOpenDesk(true); handleClickSvg(); }} className="focus:outline-none">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -155,7 +186,7 @@ function Navbar() {
                             </svg>
                             {/* Language menu Dropdown */}
                             <div className="lg:inline hidden sm:hidden items-center justify-center">
-                                <div className={`languagedp fixed mt-6 top-8 right-48 w-68 lg:right-32 items-center justify-center bg-white flex flex-col rounded-lg transition-all duration-500 ease-in-out transform ${menuOpen ? '' : 'hidden'}`}>
+                                <div className={`languagedp fixed mt-6 top-8 right-48 w-68 lg:right-32 items-center justify-center bg-white flex flex-col rounded-lg transition-all duration-500 ease-in-out transform ${menuOpenDesk ? '' : 'hidden'}`}>
                                     <div className='mt-6 top-8 right-48 w-56 bg-white flex flex-col rounded-lg' id='divlan' style={{ padding: '10px', margin: '10px' }}>
                                         <h1 className='mb-4 text-black text-center font-modern capitalize'>Selected language</h1>
                                         <button onClick={() => changeLanguage('en')} className='language_btn2 lg:inline space-y-2 hidden bg-gray-100 sm:hidden hover:text-blue-400 text-black font-bold py-2 px-4  mb-2 rounded'>English</button>
