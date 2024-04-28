@@ -13,8 +13,8 @@ const navLink = [
         key: 'about'
     },
     {
-        path: '#ourExpertise',
-        key: 'our_expertise'
+        path: '#ourexpertise',
+        key: 'ourexpertise'
     },
     {
         path: '#reference',
@@ -33,7 +33,7 @@ const navLink = [
 function Navbar() {
     const [menuOpenDesk, setMenuOpenDesk] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
-    const [currentLanguage, setCurrentLanguage] = useState(localStorage.getItem('selectedLanguage') || 'en');
+    const [currentLanguage, setCurrentLanguage] = useState(localStorage.getItem('selectedLanguage') || 'tr');
     const { t, i18n } = useTranslation();
     const [selectLanguage, setSelectLanguage] = useState(false);
     const dropdownRef = useRef(null);

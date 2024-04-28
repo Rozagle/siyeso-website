@@ -10,3 +10,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  @apply leading-[normal] m-0;
+}
+*,
+::before,
+::after {
+  border-width: 0;
+}

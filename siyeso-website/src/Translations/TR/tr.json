@@ -1,7 +1,7 @@
 {
     "home": "Ana Sayfa",
     "about": "Hakkımızda",
-    "our_expertise": "Uzmanlık Alanlarımız",
+    "ourexpertise": "Uzmanlık Alanlarımız",
     "reference": "Referanslar",
     "team": "Ekip",
     "contact": "İletişim",
@@ -12,11 +12,48 @@
       "description": "Yazılım şirketleri, süreçleri optimize etmek ve endüstrileri dönüştürmek için çözümler üreten ve sunan teknoloji yenilikçileridir. Yetenekli profesyonellerden oluşan çevik ekiplerle.",
       "button_text": "Keşf et"
     },
-    "analysis-container": {
-      "heading": "VERİ ANALİZİ",
+    "analysis": {
+      "heading": "VERİ ANALIZI",
       "h1": "İşinizi analiz ediyor ve size en iyi çözümü sunuyoruz",
       "description":"Merkezi veri analizi merkezimizle kuruluşunuzu güçlendirin. Platformumuz, veri toplama, düzenleme ve analiz için bir dizi araç sunar, bilinçli karar verme için işe yarar içgörüler sağlar. İş akışlarını optimize edin, işbirliğini artırın ve veri analizi çabalarınızın tam potansiyelini açığa çıkarın."
+    },
+    "client":{
+      "heading": "Referanslarımız",
+      "subheading": "Birlikte çalıştığımız müşterilerimiz"
+    },
+    "contactus":{
+      "heading":"Bizimle iletişime geç!",
+      "subheading":"Akışınızı optimize etmek için ipuçları ve püf noktaları mı istiyorsunuz?",
+      "signupdescription":"Bültenimize kaydolun ve güncel kalın.",
+      "policydescription":"Verilerinizin korunmasını önemsiyoruz. Bizim okuyun",
+      "policydescriptionspan": " Gizlilik Politikası",
+      "notifymebtn": "bana bildir",
+      "subscriptionSuccesstxt":"Uyelik icin tesekkurler",
+      "subscriptionSuccesstxt2":"mesajiniz basariyla gonderildi.",
+      "erroremail":"mail addressi giriniz",
+      "errorvalidemail":"Please enter a valid email address.",
+      "placeholdername": "isism",
+      "placeholdercompanyname": "sirket",
+      "placeholderemail": "mail"
+    },
+    "OurExpertise":{
+      "heading":"Uzmanlıklarımız",
+      "subheading":"Aşağıdaki alanlarda projeler geliştiriyoruz.",
+      "firstgridheading":"Servet Yönetimi",
+      "firstgridsubheading":"Siyeso Servet Yönetimi Çözümü, servet yöneticilerinin süreçler esnasında karşılaşabilecekleri her türlü engeli aşmalarına yardım ederek karlı ve sürdürülebilir bir iş sağlamak için tasarlanmış özel bir Bankacılık finansman çözümüdür.",
+      "secondgridheading":"Kıymetli Maden Yönetimi",
+      "secondgridsubheading":"Kıymetli madenler platformu borsa, banka, müşteri, yerli ve yabancı finans kurumlarındaki işlemlerin yönetilebileceği bir sistemdir. Kuruluşlar kıymetli maden işlemlerini otomatize edip hızlıca finansal sisteme kazandıracaklardır.",
+      "thirdgridhaeding":"Hazine Yönetimi",
+      "thirdgridsubhaeding":"Finansal platformlarda özelleştirilmiş hazine çözümleri sunulmaktadır.",
+      "forthgridheading":"Ar-Ge Çalışmaları",
+      "forthgridsubheading":"Finansal sistemlerle bütünleşik, yeni çözümler üretilmektedir."
+    },
+    "About":{
+      "heading":"Hakkımızda",
+      "subheading":"Biz bir dijital yaratıcı ajansız",
+      "description":"Siyeso, başta bankacılık ve finans alanında kurumların ihtiyaçları doğrultusunda çözümler sunan bir şirkettir. Deneyimli kadrosuyla kurumların iş yapış modellerini değiştirmelerine yardımcı olacak danışmanlık hizmeti de vermektedir. Teknopark üyesi olan şirketimiz AR-GE çözümleri de üretmekte ve bu tür projelere destek vermeyi sürdürmektedir. Şirketimiz sadece ülke içinde değil ülke dışında da hizmetler sunmak için çalışmalarını sürdürmektedir. Müşteri odaklı yaklaşımı benimseyen firmamız, çevik yaklaşım (AGILE) esaslarına uygun olarak platform bağımsız yeni nesil teknolojilerle yazılım projeleri geliştiren şirketimiz müşterilerinin rekabet gücünün artmasına yardımcı olmayı hedeflemektedir."
     }
+
 
   }
   

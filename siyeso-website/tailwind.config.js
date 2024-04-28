@@ -15,6 +15,7 @@ export default {
         brandprimary: "#4CAF4F",
         netralDgray: "#717171",
       },
+      
     },
     screens: {
       xs: "480px",
@@ -27,3 +28,4 @@ export default {
   },
   plugins: [],
 };
+

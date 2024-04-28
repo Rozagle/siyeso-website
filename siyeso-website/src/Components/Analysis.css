@@ -5,7 +5,7 @@
 }
 
 .max-width-container {
-  max-width: 940px;
+  max-width: 1040px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -41,7 +41,7 @@
 .description {
 }
 
-/* Responsive Adjustments */
+/* Responsive sScreens */
 @media (max-width: 480px) {
   /* xs */
   .max-width-container {
@@ -85,10 +85,3 @@
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1200px) {
-  /* lg */
-}
-
-@media (min-width: 1200px) and (max-width: 1700px) {
-  /* xl */
-}

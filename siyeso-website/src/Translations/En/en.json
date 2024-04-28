@@ -1,7 +1,7 @@
 {
     "home": "Home",
     "about": "About",
-    "our_expertise": "Our Expertise",
+    "ourexpertise": "Our Expertise",
     "reference": "Reference",
     "team": "Team",
     "contact": "Contact",
@@ -12,10 +12,46 @@
       "description": "Software companies are tech innovators, crafting and delivering solutions to streamline processes and transform industries. With agile teams of skilled professionals.",
       "button_text": "Learn more"
     },
-    "analysis-container": {
+    "analysis": {
       "heading": "DATA ANALYSIS",
       "h1": "We analyze your business and provide you with the best solution",
       "description":"Empower your organization with our centralized data analysis hub. Our platform offers a suite of tools for gathering, organizing, and analyzing data, providing actionable insights for informed decision-making. Optimize workflows, enhance collaboration, and unlock the full potential of your data analysis efforts."
+    },
+    "client":{
+      "heading": "References",
+      "subheading":"These are the customers, We've worked with"
+    },
+    "contactus":{
+      "heading":"Feel Free to Contact Us!",
+      "subheading":"Want tips and tricks to optimize your flow?",
+      "signupdescription":"Sign up to our newsletter and stay up to date.",
+      "policydescription":"We care about the protection of your data. Read our",
+      "policydescriptionspan": "Privacy Policy",
+      "notifymebtn": "Notify me",
+      "subscriptionSuccesstxt":"Thank you for subscribing!",
+      "subscriptionSuccesstxt2":"Your message was successfully sent.",
+      "erroremail":"Please enter an email address.",
+      "errorvalidemail":"Please enter a valid email address.",
+      "placeholdername": "Enter your name",
+      "placeholdercompanyname": "Enter your Company Name",
+      "placeholderemail": "Enter Email Address"
+    },
+    "OurExpertise":{
+      "heading":"Our Expertise",
+      "subheading":"We develop projects for different types of customers in below areas.",
+      "firstgridheading":"Wealth Management",
+      "firstgridsubheading":"Siyeso Wealth Management Solution, a Private Banking finance solution that designed for helping asset managers to overcome any obstacle and to assist them for a sustainable and profitable business.",
+      "secondgridheading":"Precious Metal Management",
+      "secondgridsubheading":"The precious metals platform is a system where transactions in stock exchanges, banks, customers, domestic and foreign financial institutions can be managed. Organizations will automate their precious metal transactions and quickly bring them into the financial system.",
+      "thirdgridhaeding":"Treasury Management",
+      "thirdgridsubhaeding":"Customized treasury management solutions are offered on financial platforms.",
+      "forthgridheading":"R&D Works",
+      "forthgridsubheading":"New solutions are produced integrated with financial systems."
+    },
+    "About":{
+      "heading":"About our business",
+      "subheading":"We are a creative agency",
+      "description":"Siyeso is a company that offers solutions in line with the needs of institutions, especially in the field of banking and finance. With its experienced staff, it also provides consultancy services to help institutions change their business models. Our company, which is a member of Technopark, also produces R&D solutions and continues to support such projects. Our company continues its efforts to provide services not only within the country but also outside the country. Our company, which adopts a customer-oriented approach, develops software projects with platform-independent new generation technologies in accordance with the agile approach (AGILE) principles, and aims to help its customers increase their competitiveness"
     }
   }
   

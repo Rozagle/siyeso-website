@@ -6,7 +6,13 @@ function Team() {
 
   return (
     <>
-      
+
+      <div className='flex '>
+        <div className='max-width-container'>
+
+        </div>
+      </div>
+
     </>
   );
 }

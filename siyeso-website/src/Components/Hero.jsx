@@ -5,12 +5,19 @@ import herologo from '/logo-hero.png';
 import herobg from '/herobg.svg';
 
 function Hero() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [currentLanguage] = useState(() => localStorage.getItem('selectedLanguage') || 'tr');
+
+  useEffect(() => {
+    i18n.changeLanguage(currentLanguage);
+  }, [currentLanguage, i18n]);
+
   return (
     <>
-      <div className='hero max-w-[6840px] min-h-[700px] flex flex-col md:flex-row items-center justify-center bg-cover bg-center text-white relative z-0' style={{
-        backgroundImage: `url(${herobg})`,
-      }}>
+      <div  
+      id='home' className='hero max-w-[6840px] min-h-[700px] flex flex-col md:flex-row items-center justify-center bg-cover bg-center text-white relative z-0'style={{
+          backgroundImage: `url(${herobg})`,
+        }}>
 
         {/* left-side Hero */}
         <div className="left-side lg:w-3/5 md:w-1/2 flex flex-col justify-center text-center md:text-left px-16 lg:pb-32 md:pb-28">

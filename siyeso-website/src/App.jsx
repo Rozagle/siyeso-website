@@ -1,15 +1,18 @@
-import { Navbar, Hero, Analysis, Client, Team, Contect } from './Components/Imports';
+import { Navbar, Hero, Analysis, Client, Team, Contect, Footer, OurExpertise, About } from './Components/Imports';
 
 function App() {
 
   return (
     <>
-      <Navbar />
-      <Hero />
-      <Analysis />
-      <Client />
-      <Team />
-      <Contect />
+      <Navbar/>
+      <Hero/>
+      <Analysis/>
+      <About/>
+      <OurExpertise/> 
+      <Client/>
+      <Team/>
+      <Contect/>
+      <Footer/>
     </>
   );
 }

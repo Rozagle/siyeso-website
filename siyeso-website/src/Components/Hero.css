@@ -1,11 +1,97 @@
-.hero {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+/* Hero.css */
+.hero-container {
+  width: 100%;
+  background-color: #fff;
+  min-height: 700px;
+  padding: 4rem 1rem;
 }
 
-@media screen and (max-width: 768px) {
-  .hero {
-    background-size: contain; /* Adjust the background size as needed */
+.hero-content {
+  max-width: 940px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-left {
+  width: 100%;
+  max-width: 50%;
+  text-align: center;
+  padding: 0 16px;
+}
+
+.hero-right {
+  width: 100%;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subheading {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #333;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  max-width: 70%;
+  margin-bottom: 6rem;
+}
+
+@media (min-width: 768px) { /* md */
+  .hero-content {
+      flex-direction: row;
+  }
+
+  .hero-left {
+      text-align: left;
+      padding: 0 32px;
+      padding-bottom: 3rem;
+  }
+
+  .hero-right {
+      justify-content: flex-start;
+  }
+
+  .logo {
+      max-width: 50%;
+      margin-bottom: 8rem;
+      margin-left: 6rem;
   }
 }
