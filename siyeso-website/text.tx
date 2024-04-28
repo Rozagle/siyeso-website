@@ -285,3 +285,273 @@ function Client() {
 
 export default Client;
 
+;;;;;;;;;;;;;;;;;;;;;;
+.swiper{
+  width: 100%;
+}
+
+.swiper-wrapper{
+  width: 100%;
+  height: 35em;
+  display:flex;
+  align-items: center;
+}
+
+.card{
+  width: 20em;
+  height: 90%;
+  background-color: #fff;
+  border-radius: 2em;
+  box-shadow: 0 0 2em rgb(0, 0, 0, .2);
+  padding: 2em 1em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 2em;
+}
+
+.swiper-slide:not(.swiper-slide-active){
+  filter: blur(1px);
+}
+
+.swiper-slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card_image {
+  width: 10em;
+  height: 10em;
+  border-radius: 5px solid #9176ff;
+  padding: 3px;
+  margin-bottom: 2em;
+}
+
+.card_image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card_content{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card_title{
+  font-size: 1.5em;
+  font-weight: 500;
+  position: relative;
+  top: .2em;
+}
+
+.card_name{
+  color: #9176ff;
+}
+
+.card_text{
+  text-align: center;
+  font-size: 1.1em;
+  margin: 1em 0;
+}
+
+.card_btn{
+  color: #fff;
+  background-color: #9176ff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  padding: .5em;
+  border-radius: .5em;
+  margin-top: .5em;
+  cursor: pointer;
+}
+
+
+,,,,,,
+
+<div className='flex'>
+        <section className="swiper-container mySwiper">
+          <div className="swiper-wrapper">
+
+            <div className="card swiper-slide">
+              <div className="cardimage">
+                <img src={team1} alt="" />
+              </div>
+              <div className="card-contant">
+                <span className="card_name">
+                  Naci Özkan
+                </span>
+                <span className='card_title'>
+                  Managing Partner
+                  General Director
+                </span>
+                <p className="card_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ullam laudantium nam expedita ducimus qui ipsum repudiandae sunt, tenetur quaerat enim incidunt esse omnis rem rerum mollitia beatae tempore dolorum!</p>
+                <button className='card_btn'>linkend</button>
+              </div>
+            </div>
+            <div className="card swiper-slide">
+              <div className="card_image">
+                <img src={team1} alt="" />
+              </div>
+              <div className="card-contant">
+                <span className="card_name">
+                  Naci Özkan
+                </span>
+                <span className='card_title'>
+                  Managing Partner
+                  General Director
+                </span>
+                <p className="card_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ullam laudantium nam expedita ducimus qui ipsum repudiandae sunt, tenetur quaerat enim incidunt esse omnis rem rerum mollitia beatae tempore dolorum!</p>
+                <button className='card_btn'>linkend</button>
+              </div>
+            </div>
+            <div className="card swiper-slide">
+              <div className="card_image">
+                <img src={team1} alt="" />
+              </div>
+              <div className="card-contant">
+                <span className="card_name">
+                  Naci Özkan
+                </span>
+                <span className='card_title'>
+                  Managing Partner
+                  General Director
+                </span>
+                <p className="card_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ullam laudantium nam expedita ducimus qui ipsum repudiandae sunt, tenetur quaerat enim incidunt esse omnis rem rerum mollitia beatae tempore dolorum!</p>
+                <button className='card_btn'>linkend</button>
+              </div>
+            </div>
+            <div className="card swiper-slide">
+              <div className="card_image">
+                <img src={team1} alt="" />
+              </div>
+              <div className="card-contant">
+                <span className="card_name">
+                  Naci Özkan
+                </span>
+                <span className='card_title'>
+                  Managing Partner
+                  General Director
+                </span>
+                <p className="card_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ullam laudantium nam expedita ducimus qui ipsum repudiandae sunt, tenetur quaerat enim incidunt esse omnis rem rerum mollitia beatae tempore dolorum!</p>
+                <button className='card_btn'>linkend</button>
+              </div>
+            </div>
+            <div className="card swiper-slide">
+              <div className="card_image">
+                <img src={team1} alt="" />
+              </div>
+              <div className="card-contant">
+                <span className="card_name">
+                  Naci Özkan
+                </span>
+                <span className='card_title'>
+                  Managing Partner
+                  General Director
+                </span>
+                <p className="card_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ullam laudantium nam expedita ducimus qui ipsum repudiandae sunt, tenetur quaerat enim incidunt esse omnis rem rerum mollitia beatae tempore dolorum!</p>
+                <button className='card_btn'>linkend</button>
+              </div>
+            </div>
+            <div className="card swiper-slide">
+              <div className="card_image">
+                <img src={team1} alt="" />
+              </div>
+              <div className="card-contant">
+                <span className="card_name">
+                  Naci Özkan
+                </span>
+                <span className='card_title'>
+                  Managing Partner
+                  General Director
+                </span>
+                <p className="card_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ullam laudantium nam expedita ducimus qui ipsum repudiandae sunt, tenetur quaerat enim incidunt esse omnis rem rerum mollitia beatae tempore dolorum!</p>
+                <button className='card_btn'>linkend</button>
+              </div>
+            </div>
+            
+          </div>
+        </section>
+      </div>
+
+      ..............................
+      // eslint-disable-next-line no-unused-vars
+import React, { useEffect } from 'react';
+
+import team1 from '../assets/team1.jpg';
+
+
+function Team() {
+
+  return (
+    <div id='team' className="w-full min-h-[500px] flex flex-col justify-center items-center mb-8 text-neutral-700">
+      <div className='flex space-y-2 flex-col text-center mb-14'>
+        <h1 className="md:text-4xl sm:text-3xl text-2xl font-bold text-center mt-8 mb-4 capitalize">
+          Our Team
+        </h1>
+        <span className='text-2xl'>
+          fsgr
+        </span>
+      </div>
+      <div className="myswiper w-full mb-4">
+        <div className="swiper-wrapper w-full h-102 flex items-center">
+
+          <div className="card w-100 h-5/6 bg-white rounded-xl shadow-lg p-8 flex flex-col items-center justify-center mx-8">
+            <div className="card_image w-40 h-40 border-4 border-solid border-purple-600 rounded-full p-2 mb-8">
+              <img src={team1} alt="Image" className="w-full h-full rounded-full object-cover" />
+            </div>
+            <div className="card_content flex flex-col items-center">
+              <h2 className="card_title text-2xl font-semibold relative top-1">Name</h2>
+              <p className="card_text text-lg text-center mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+          <div className="card w-100 h-5/6 bg-white rounded-xl shadow-lg p-8 flex flex-col items-center justify-center mx-8">
+            <div className="card_image w-40 h-40 border-4 border-solid border-purple-600 rounded-full p-2 mb-8">
+              <img src={team1} alt="Image" className="w-full h-full rounded-full object-cover" />
+            </div>
+            <div className="card_content flex flex-col items-center">
+              <h2 className="card_title text-2xl font-semibold relative top-1">Name</h2>
+              <p className="card_text text-lg text-center mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+          <div className="card w-100 h-5/6 bg-white rounded-xl shadow-lg p-8 flex flex-col items-center justify-center mx-8">
+            <div className="card_image w-40 h-40 border-4 border-solid border-purple-600 rounded-full p-2 mb-8">
+              <img src={team1} alt="Image" className="w-full h-full rounded-full object-cover" />
+            </div>
+            <div className="card_content flex flex-col items-center">
+              <h2 className="card_title text-2xl font-semibold relative top-1">Name</h2>
+              <p className="card_text text-lg text-center mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+          <div className="card w-100 h-5/6 bg-white rounded-xl shadow-lg p-8 flex flex-col items-center justify-center mx-8">
+            <div className="card_image w-40 h-40 border-4 border-solid border-purple-600 rounded-full p-2 mb-8">
+              <img src={team1} alt="Image" className="w-full h-full rounded-full object-cover" />
+            </div>
+            <div className="card_content flex flex-col items-center">
+              <h2 className="card_title text-2xl font-semibold relative top-1">Name</h2>
+              <p className="card_text text-lg text-center mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+          <div className="card w-100 h-5/6 bg-white rounded-xl shadow-lg p-8 flex flex-col items-center justify-center mx-8">
+            <div className="card_image w-40 h-40 border-4 border-solid border-purple-600 rounded-full p-2 mb-8">
+              <img src={team1} alt="Image" className="w-full h-full rounded-full object-cover" />
+            </div>
+            <div className="card_content flex flex-col items-center">
+              <h2 className="card_title text-2xl font-semibold relative top-1">Name</h2>
+              <p className="card_text text-lg text-center mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Team;
+
