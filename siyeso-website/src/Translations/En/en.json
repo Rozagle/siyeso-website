@@ -32,6 +32,8 @@
       "subscriptionSuccesstxt2":"Your message was successfully sent.",
       "erroremail":"Please enter an email address.",
       "errorvalidemail":"Please enter a valid email address.",
+      "erroremptyname": "Please enter your name.",
+      "erroremptycompany": "Please enter your company name.",
       "placeholdername": "Enter your name",
       "placeholdercompanyname": "Enter your Company Name",
       "placeholderemail": "Enter Email Address"
@@ -49,7 +51,7 @@
       "forthgridsubheading":"New solutions are produced integrated with financial systems."
     },
     "About":{
-      "heading":"About our business",
+      "heading":"About Our Business",
       "subheading":"We are a creative agency",
       "description":"Siyeso is a company that offers solutions in line with the needs of institutions, especially in the field of banking and finance. With its experienced staff, it also provides consultancy services to help institutions change their business models. Our company, which is a member of Technopark, also produces R&D solutions and continues to support such projects. Our company continues its efforts to provide services not only within the country but also outside the country. Our company, which adopts a customer-oriented approach, develops software projects with platform-independent new generation technologies in accordance with the agile approach (AGILE) principles, and aims to help its customers increase their competitiveness"
     },
@@ -67,6 +69,13 @@
       "Subscribe":"Subscribe",
       "subscriptionSuccesstxt":"Thank you for subscribing!",
       "subscriptionSuccesstxt2":"You will get updates about siyeso"
+    },
+    "changing": {
+      "imageUrl1": "src/assets/frame1.svg",
+      "imageUrl2": "src/assets/frame2.svg",
+      "imageUrl3": "src/assets/frame3.svg",
+      "imageUrl4": "src/assets/frame4.svg"
     }
+    
   }
   

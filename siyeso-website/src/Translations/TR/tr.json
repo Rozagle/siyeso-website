@@ -18,7 +18,8 @@
       "description":"Merkezi veri analizi merkezimizle kuruluşunuzu güçlendirin. Platformumuz, veri toplama, düzenleme ve analiz için bir dizi araç sunar, bilinçli karar verme için işe yarar içgörüler sağlar. İş akışlarını optimize edin, işbirliğini artırın ve veri analizi çabalarınızın tam potansiyelini açığa çıkarın."
     },
     "client":{
-      "heading": "Referanslarımız",
+      "heading1":"",
+      "heading2": "Referanslarımız",
       "subheading": "Birlikte çalıştığımız müşterilerimiz"
     },
     "contactus": {
@@ -30,8 +31,10 @@
       "notifymebtn": "Bildir",
       "subscriptionSuccesstxt": "Abone olduğunuz için teşekkür ederiz!",
       "subscriptionSuccesstxt2": "Mesajınız başarıyla gönderildi.",
-      "erroremail": "Lütfen bir e-posta adresi girin.",
-      "errorvalidemail": "Lütfen geçerli bir e-posta adresi girin.",
+      "erroremail": "Lütfen bir e-posta adresi giriniz.",
+      "errorvalidemail": "Lütfen geçerli bir e-posta adresi giriniz.",
+      "erroremptyname":"Lütfen adınızı giriniz.",
+      "erroremptycompany":"Lütfen şirket Adınızı giriniz",
       "placeholdername": "Adınızı girin",
       "placeholdercompanyname": "Şirket Adınızı girin",
       "placeholderemail": "E-posta Adresinizi girin"
@@ -68,6 +71,9 @@
       "Subscribe": "Abone Ol",
       "subscriptionSuccesstxt": "Abone olduğunuz için teşekkür ederiz!",
       "subscriptionSuccesstxt2": "Siyeso hakkında güncellemeler alacaksınız"
+  },
+  "changing": {
+    "imageUrl2": "src/assets/frame2.svg"
   }
 
 

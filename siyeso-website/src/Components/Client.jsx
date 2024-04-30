@@ -16,10 +16,10 @@ function Client() {
 
     return (
         <>
-            <div id='reference' className="w-full min-h-[500px] flex flex-col justify-center items-center  text-neutral-700">
+            <div id='reference' className="w-full min-h-[600px] flex flex-col justify-center items-center  text-neutral-700">
                 <div className='w-[100%] flex flex-col'>
                     <div className='flex space-y-2 flex-col text-center mb-14'>
-                        <h2 className='text-lg md:text-lg font-bold text-[#00df9a]'>{t('About.heading')}</h2>
+                        {/* <h2 className='text-lg md:text-lg font-bold text-[#00df9a]'>{t('client.heading1')}</h2> */}
 
                         <h1 className="md:text-4xl sm:text-3xl text-2xl font-bold text-center mt-8 mb-4 capitalize">
                             {t('client.heading')}

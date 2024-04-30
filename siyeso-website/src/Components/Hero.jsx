@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import herologo from '/logo-hero.png';
-import herobg from '/herobg3.svg';
+import herobg from '/herobg2.svg';
 
 function Hero() {
   const { t, i18n } = useTranslation();

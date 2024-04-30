@@ -12,6 +12,7 @@
 }
 body {
   @apply leading-[normal] m-0;
+  overflow-x: hidden;
 }
 *,
 ::before,

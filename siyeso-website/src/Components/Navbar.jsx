@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 const navLink = [
     {
-        path: '#home',
+        path: '#hero',
         key: 'home'
     },
     {

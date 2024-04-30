@@ -6,8 +6,8 @@ function App() {
       <Navbar/>
       <Hero/>
       <ChangingNeeds/>
-      <Analysis/>
-      <Develope/>
+      {/* <Analysis/>
+      <Develope/> */}
       <About/>
       <OurExpertise/> 
       <Client/>
