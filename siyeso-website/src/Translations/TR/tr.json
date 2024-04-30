@@ -9,7 +9,7 @@
     "left_side_hero": {
       "heading": "Projeleriniz için tek adımda çözümler?",
       "subheading": "Tek BİR platformda",
-      "description": "Yazılım şirketleri, süreçleri optimize etmek ve endüstrileri dönüştürmek için çözümler üreten ve sunan teknoloji yenilikçileridir. Yetenekli profesyonellerden oluşan çevik ekiplerle.",
+      "description": "Yazılım şirketleri, süreçleri optimize etmek ve endüstrileri dönüştürmek için çözümler üreten",
       "button_text": "Keşf et"
     },
     "analysis": {
@@ -21,21 +21,21 @@
       "heading": "Referanslarımız",
       "subheading": "Birlikte çalıştığımız müşterilerimiz"
     },
-    "contactus":{
-      "heading":"Bizimle iletişime geç!",
-      "subheading":"Akışınızı optimize etmek için ipuçları ve püf noktaları mı istiyorsunuz?",
-      "signupdescription":"Bültenimize kaydolun ve güncel kalın.",
-      "policydescription":"Verilerinizin korunmasını önemsiyoruz. Bizim okuyun",
-      "policydescriptionspan": " Gizlilik Politikası",
-      "notifymebtn": "bana bildir",
-      "subscriptionSuccesstxt":"Uyelik icin tesekkurler",
-      "subscriptionSuccesstxt2":"mesajiniz basariyla gonderildi.",
-      "erroremail":"mail addressi giriniz",
-      "errorvalidemail":"Please enter a valid email address.",
-      "placeholdername": "isism",
-      "placeholdercompanyname": "sirket",
-      "placeholderemail": "mail"
-    },
+    "contactus": {
+      "heading": "Bize İstediğiniz Zaman Ulaşın!",
+      "subheading": "Akışınızı optimize etmek için ipuçları ve püf noktaları mı istiyorsunuz?",
+      "signupdescription": "Bültenimize kaydolun ve güncel kalın.",
+      "policydescription": "Verilerinizin korunmasına önem veriyoruz. Şu",
+      "policydescriptionspan": "Gizlilik Politikası",
+      "notifymebtn": "Bildir",
+      "subscriptionSuccesstxt": "Abone olduğunuz için teşekkür ederiz!",
+      "subscriptionSuccesstxt2": "Mesajınız başarıyla gönderildi.",
+      "erroremail": "Lütfen bir e-posta adresi girin.",
+      "errorvalidemail": "Lütfen geçerli bir e-posta adresi girin.",
+      "placeholdername": "Adınızı girin",
+      "placeholdercompanyname": "Şirket Adınızı girin",
+      "placeholderemail": "E-posta Adresinizi girin"
+      },
     "OurExpertise":{
       "heading":"Uzmanlıklarımız",
       "subheading":"Aşağıdaki alanlarda projeler geliştiriyoruz.",
@@ -52,7 +52,23 @@
       "heading":"Hakkımızda",
       "subheading":"Biz bir dijital yaratıcı ajansız",
       "description":"Siyeso, başta bankacılık ve finans alanında kurumların ihtiyaçları doğrultusunda çözümler sunan bir şirkettir. Deneyimli kadrosuyla kurumların iş yapış modellerini değiştirmelerine yardımcı olacak danışmanlık hizmeti de vermektedir. Teknopark üyesi olan şirketimiz AR-GE çözümleri de üretmekte ve bu tür projelere destek vermeyi sürdürmektedir. Şirketimiz sadece ülke içinde değil ülke dışında da hizmetler sunmak için çalışmalarını sürdürmektedir. Müşteri odaklı yaklaşımı benimseyen firmamız, çevik yaklaşım (AGILE) esaslarına uygun olarak platform bağımsız yeni nesil teknolojilerle yazılım projeleri geliştiren şirketimiz müşterilerinin rekabet gücünün artmasına yardımcı olmayı hedeflemektedir."
-    }
+    },
+    
+    "Footer": {
+      "heading1": "Bilgilerimiz",
+      "address": "Adres:  Sanayi Mahallesi, Teknopark Bulvarı, No: 1 / 2C İç Kapı No: 2105 Pendik İSTANBUL",
+      "phone": "Ofis: +90 532 595 97 09",
+      "mail": "Destek: info@siyeso.com",
+      "heading2": "Diğerleri",
+      "contactus": "Bize Ulaşın",
+      "policy": "Gizlilik Politikası",
+      "terms": "Kullanım Şartları",
+      "newsletter": "Bülten",
+      "newsletterdescription": "Bültenimize abone olun ve güncellemelerimizden ilk siz haberdar olun",
+      "Subscribe": "Abone Ol",
+      "subscriptionSuccesstxt": "Abone olduğunuz için teşekkür ederiz!",
+      "subscriptionSuccesstxt2": "Siyeso hakkında güncellemeler alacaksınız"
+  }
 
 
   }

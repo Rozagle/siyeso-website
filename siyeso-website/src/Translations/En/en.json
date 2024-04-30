@@ -9,7 +9,7 @@
     "left_side_hero": {
       "heading": "One-step solutions for your projects?",
       "subheading": "All in one platform",
-      "description": "Software companies are tech innovators, crafting and delivering solutions to streamline processes and transform industries. With agile teams of skilled professionals.",
+      "description": "Software companies are tech innovators, crafting and delivering solutions to streamline",
       "button_text": "Learn more"
     },
     "analysis": {
@@ -52,6 +52,21 @@
       "heading":"About our business",
       "subheading":"We are a creative agency",
       "description":"Siyeso is a company that offers solutions in line with the needs of institutions, especially in the field of banking and finance. With its experienced staff, it also provides consultancy services to help institutions change their business models. Our company, which is a member of Technopark, also produces R&D solutions and continues to support such projects. Our company continues its efforts to provide services not only within the country but also outside the country. Our company, which adopts a customer-oriented approach, develops software projects with platform-independent new generation technologies in accordance with the agile approach (AGILE) principles, and aims to help its customers increase their competitiveness"
+    },
+    "Footer":{
+      "heading1":"Our Information",
+      "address":"Address: Sanayi Neighborhood, Teknopark Boulevard, No: 1 / 2C Inner Door No: 2105 Pendik ISTANBUL",
+      "phone":"Office: +90 532 595 97 09",
+      "mail":"Support: info@siyeso.com",
+      "heading2": "Others",
+      "contactus":"Contact Us",
+      "policy":"Privacy Policy",
+      "terms":"Terms and Conditions",
+      "newsletter":"Newsletter",
+      "newsletterdescription":"Subscribe to our newsletter and be the first to know about our updates",
+      "Subscribe":"Subscribe",
+      "subscriptionSuccesstxt":"Thank you for subscribing!",
+      "subscriptionSuccesstxt2":"You will get updates about siyeso"
     }
   }
   

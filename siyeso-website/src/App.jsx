@@ -1,16 +1,17 @@
-import { Navbar, Hero, Analysis, Client, Team, Contect, Footer, OurExpertise, About } from './Components/Imports';
-
+import { Navbar, Hero, Analysis,Develope, Client,  Contect, Footer, OurExpertise, About ,ChangingNeeds } from './Components/Imports';
 function App() {
 
   return (
     <>
       <Navbar/>
       <Hero/>
+      <ChangingNeeds/>
       <Analysis/>
+      <Develope/>
       <About/>
       <OurExpertise/> 
       <Client/>
-      <Team/>
+      {/* <Team/> */}
       <Contect/>
       <Footer/>
     </>

@@ -3,9 +3,9 @@ import React, { useState, useEffect } from 'react';
 import Lottie from 'lottie-react';
 import { useTranslation } from 'react-i18next';
 import analysis from '../assets/analysis.json';
-import './Analysis.css';
+import './Develope.css';
 
-function Analysis() {
+function Develope() {
     const { t, i18n } = useTranslation();
     const [currentLanguage] = useState(() => localStorage.getItem('selectedLanguage') || 'tr');
 
@@ -16,7 +16,6 @@ function Analysis() {
     return (
         <div className='analysis-container'>
             <div className='max-width-container'>
-                <Lottie className='lottie-animation' animationData={analysis} />
                 <div className='text-container'>
                     <p className='title'>
                         {t('analysis.heading')}
@@ -28,11 +27,12 @@ function Analysis() {
                         {t('analysis.description')}
                     </p>
                 </div>
+                <div className='lottie-container'>
+                    <Lottie className='lottie-animation' animationData={analysis} />
+                </div>
             </div>
         </div>
     );
 }
 
-export default Analysis;
-
-
+export default Develope;

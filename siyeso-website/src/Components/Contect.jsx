@@ -17,31 +17,43 @@ function Contect() {
 
   const handleFirstNameChange = (event) => {
     setFirstName(event.target.value);
-    console.log(firstName)
+    if (!event.target.value.trim()) {
+      setErrorMessage(t('contactus.erroremptyname'));
+    } else {
+      setErrorMessage('');
+    }
   };
   const handleComNameChange = (event) => {
     setComName(event.target.value);
-    console.log(comName)
-
+    if (!event.target.value.trim()) {
+      setErrorMessage(t('contactus.erroremptycompany'));
+    } else {
+      setErrorMessage('');
+    }
   };
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
-    console.log(email)
   };
 
   const handleNotifyClick = () => {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-    if (!email.trim()) {
-      setErrorMessage(t('contactcomponent.erroremail'));
+    if (!firstName.trim()) {
+      setErrorMessage(t('contactus.erroremptyname'));
+    } else if (!comName.trim()) {
+      setErrorMessage(t('contactus.erroremptycompany'));
+    } else if (!email.trim()) {
+      setErrorMessage(t('contactus.erroremail'));
     } else if (!emailRegex.test(email)) {
-      setErrorMessage(t('contactcomponent.errorvalidemail'));
+      setErrorMessage(t('contactus.errorvalidemail'));
     } else {
       setSubscriptionSuccess(true);
 
       setEmail('');
+      setFirstName('');
+      setComName('');
       setErrorMessage('');
-      // Reset messages after 1 minute
+      // Reset messages after 3 seconds
       setTimeout(() => {
         setSubscriptionSuccess(false);
       }, 3000);
@@ -50,14 +62,15 @@ function Contect() {
     setTimeout(() => {
       setErrorMessage('');
     }, 5000);
-  };
+};
+
 
 
   return (
     <>
 
-      <div id='contact' className=' w-full py-16 text-black bg-sky-400 px-4'>
-        <div className='max-w-[1240px] max-h-[450px] mx-auto grid lg:grid-cols-3'>
+      <div id='contact' className=' w-full py-16 text-black bg-[#6391FF] px-4'>
+        <div className='max-w-[1240px] max-h-[420px] xxs:max-h-[500px]  mx-auto grid lg:grid-cols-3'>
           <div className='lg:col-span-2'>
             <h1 className='md:text-5xl sm:text-4xl text-2xl font-bold py-6'> {t('contactus.heading')}</h1>
             <h2 className='md:text-3xl sm:text-2xl text-xl font-bold py-2'>{t('contactus.subheading')}</h2>
@@ -67,9 +80,9 @@ function Contect() {
             <div className='flex flex-col sm:flex-cols items-center justify-between w-full'>
               <input className='p-3 m-2 flex w-full rounded-md text-black' type="text" placeholder={t('contactus.placeholdername')} value={firstName} onChange={handleFirstNameChange} required />
               <input className='p-3 m-2 flex w-full rounded-md text-black' type="text" placeholder={t('contactus.placeholdercompanyname')} value={comName} onChange={handleComNameChange} required />
-              <input className='p-3  m-2 flex w-full rounded-md text-black' type="email" placeholder={t('contactus.subheading')}value={email} onChange={handleEmailChange} required />
+              <input className='p-3  m-2 flex w-full rounded-md text-black' type="email" placeholder={t('contactus.placeholderemail')}value={email} onChange={handleEmailChange} required />
               <div className="flex flex-col items-start">
-                <p>{t('contactus.policydescription')} <span className=' text-blue-900 text' style={{ textDecoration: 'underline' }}>{t('contactus.policydescriptionspan')}</span>.</p>
+                <p>{t('contactus.policydescription')} <span className=' text-blue-600 text' style={{ textDecoration: 'underline' }}>{t('contactus.policydescriptionspan')}</span>.</p>
                 {errorMessage && <p className="text-red-600">{errorMessage}</p>}
               </div>
               <div>
@@ -81,8 +94,8 @@ function Contect() {
       </div>
       {subscriptionSuccess && (
         <div className="fixed top-5 left-10 w-[300px] bg-green-500 bg-opacity-50 text-white p-4 rounded-lg shadow-md transition-opacity duration-500">
-          <h2 className='subscriptionSuccesstxt'>{t('Contact.subscriptionSuccesstxt')}</h2>
-          <p className='subscriptionSuccesstxt2'>{t('Contact.subscriptionSuccesstxt2')}</p>
+          <h2 className='subscriptionSuccesstxt'>{t('contactus.subscriptionSuccesstxt')}</h2>
+          <p className='subscriptionSuccesstxt2'>{t('contactus.subscriptionSuccesstxt2')}</p>
         </div>
       )}
     </>

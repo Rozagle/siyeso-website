@@ -1,0 +1,88 @@
+.analysis-container {
+    width: 100%;
+    background-color: #fff;
+    padding: 4rem 1rem;
+  }
+  
+  .max-width-container {
+    max-width: 1040px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .lottie-animation {
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    margin-top: 4px;
+  }
+  
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 4px;
+  }
+  
+  .title {
+    color: #00df9a;
+    font-weight: bold;
+  }
+  
+  .heading {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-top: 0.5rem;
+    padding-bottom: 2rem;
+    display: inline-flex;
+  }
+  
+  .description {
+  }
+  
+  /* Responsive sScreens */
+  @media (max-width: 480px) {
+    /* xs */
+    .max-width-container {
+      grid-template-columns: 1fr;
+    }
+    .heading {
+      font-size: 1.2rem;
+      padding-bottom: 1rem;
+    }
+    .lottie-animation {
+      width: 90%;
+    }
+  }
+  
+  @media (min-width: 480px) and (max-width: 620px) {
+    /* ss */
+    .lottie-animation {
+      width: 80%;
+    }
+    .heading {
+      font-size: 1.5rem;
+      padding-bottom: 1rem;
+    }
+  }
+  
+  @media (min-width: 620px) and (max-width: 768px) {
+    /* sm */
+    .lottie-animation {
+      width: 90%;
+    }
+    .heading {
+      font-size: 1.2rem;
+      padding-bottom: 1rem;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    /* md */
+    .heading {
+      font-size: 1.8rem;
+    }
+  }
+  
+  

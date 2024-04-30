@@ -7,6 +7,9 @@ import Client from "./Client";
 import Team from "./Team";
 import Contect from "./Contect";
 import Footer from "./Footer";
+import ChangingNeeds from "./ChangingNeeds";
+import Develope from "./Develope";
+
 
 export {
   Navbar,
@@ -18,4 +21,6 @@ export {
   Contect,
   Footer,
   OurExpertise,
+  ChangingNeeds,
+  Develope
 };

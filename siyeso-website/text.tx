@@ -555,3 +555,199 @@ function Team() {
 
 export default Team;
 
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+
+// eslint-disable-next-line no-unused-vars
+import React, { useRef, useState } from 'react';
+import team1 from '../assets/team1.jpg';
+
+const data = [
+  {
+    name: "naci be1y",
+    img: team1,
+    review: "manager designer"
+  },
+  {
+    name: "naci bey2",
+    img: team1,
+    review: "manager designer"
+  },
+  {
+    name: "naci bey3",
+    img: team1,
+    review: "manager designer"
+  },
+  {
+    name: "naci bey4",
+    img: team1,
+    review: "manager designer"
+  },
+  {
+    name: "naci bey5",
+    img: team1,
+    review: "manager designer"
+  },
+  {
+    name: "naci bey6",
+    img: team1,
+    review: "manager designer"
+  },
+
+]
+
+function Team() {
+
+
+  return (
+    <div id='team' className="w-full min-h-[600px] flex flex-col justify-center items-center text-neutral-700 bg-gray-500 ">
+
+      <div className='flex space-y-2 flex-col text-center mb-14'>
+        <h1 className="md:text-4xl sm:text-3xl text-2xl font-bold text-center mt-8 mb-4 capitalize">
+          our Team
+        </h1>
+        <span className='text-2xl'>
+          Meet with our team
+        </span>
+      </div>
+      <section className="swiper-container mySwiper">
+        <div className="swiper-wrapper w-full h-96 flex items-center">          {data.map((d, index) => (
+          <div key={index} className=" w-80 h-100 bg-white rounded-xl shadow-lg p-6 flex items-center flex-col mx-8">
+            <div className="bg-white text-black rounded-xl flex flex-col justify-center items-center">
+              <div className="w-40 h-40 border-4 border-solid border-purple-600 rounded-full p-1 mb-4">
+                <img src={d.img} alt="" className="w-full h-full rounded-full object-cover" />
+              </div>
+              <div className="flex flex-col justify-center items-center gap-4 p-4">
+                <p className="text-2xl font-semibold relative top-1">{d.name}</p>
+                <p className="text-lg text-center mb-4">{d.review}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+        </div>
+      </section>
+
+
+
+    </div >
+  );
+}
+
+export default Team;
+
+
+
+ {data.map((d, index) => (
+          <div key={index} className=" w-80 h-100 bg-white rounded-xl shadow-lg p-6 flex items-center flex-col mx-8">
+            <div className="bg-white text-black rounded-xl flex flex-col justify-center items-center">
+              <div className="w-40 h-40 border-4 border-solid border-purple-600 rounded-full p-1 mb-4">
+                <img src={d.img} alt="" className="w-full h-full rounded-full object-cover" />
+              </div>
+              <div className="flex flex-col justify-center items-center gap-4 p-4">
+                <p className="text-2xl font-semibold relative top-1">{d.name}</p>
+                <p className="text-lg text-center mb-4">{d.review}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+
+
+
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+// eslint-disable-next-line no-unused-vars
+import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import herologo from '/logo-hero.png';
+import herobg from '/herobg.svg';
+
+function Hero() {
+  const { t, i18n } = useTranslation();
+  const [currentLanguage] = useState(() => localStorage.getItem('selectedLanguage') || 'tr');
+
+  useEffect(() => {
+    i18n.changeLanguage(currentLanguage);
+  }, [currentLanguage, i18n]);
+
+  return (
+    <>
+      <div  
+      id='home' className='hero max-w-[6840px] min-h-[700px] flex flex-col md:flex-row items-center justify-center bg-cover bg-center text-white relative z-0'style={{
+          backgroundImage: `url(${herobg})`,
+        }}>
+
+        {/* left-side Hero */}
+        <div className="left-side flex flex-col justify-center px-16 text-center lg:w-3/5 md:w-1/2 md:text-left lg:pb-32 md:pb-28 sm:text-left sm:text-sm">
+
+          <p className=" text-3xl pb-2 md:text-2xl sm:text-xl stext-opacity-50 uppercase" style={{ fontFamily: "Arimo, sans-serif", fontWeight: 400 }}>{t('left_side_hero.subheading')}</p>
+          <h1 className='text-2xl md:text-3xl sm:text-xl font-bold mb-2'>
+            {t('left_side_hero.heading')}
+          </h1>
+          <p className=" lg:text-xl mb-6 md:text-lg sm:text-sm">
+            {t('left_side_hero.description')}
+          </p>
+
+          <button type="button" className="flex text-white text-inline justify-center outline font-medium rounded text-sm lg:px-2 lg:py-1.5 lg:me-96 mb-2 md:px-10 md:py-0.5 md:me-36 sm:px-4 sm:">
+            {t('left_side_hero.button_text')}
+          </button>
+
+        </div>
+        {/* Right-side Hero */}
+        <div className="right-side md:w-1/2 flex sm:2/5 ">
+          <img src={herologo} alt="" className="lg:w-2/4 md:w-3/5 h-auto lg:mb-80 lg:ml-32 md:mb-80 md:ml-30 sm:1/5" />
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default Hero;
+......................
+
+
+// eslint-disable-next-line no-unused-vars
+import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import herologo from '/logo-hero.png';
+import herobg from '/herobg.svg';
+
+function Hero() {
+  const { t, i18n } = useTranslation();
+  const [currentLanguage] = useState(() => localStorage.getItem('selectedLanguage') || 'tr');
+
+  useEffect(() => {
+    i18n.changeLanguage(currentLanguage);
+  }, [currentLanguage, i18n]);
+
+  return (
+    <>
+      <div id='home' className='hero max-w-[6840px] min-h-[920px]  xxs:min-h-[800px] flex flex-col md:flex-row sm:flex-row ss:flex-row xs:flex-row xxs:flex-row items-center justify-center bg-cover bg-center text-white relative z-0'style={{
+          backgroundImage: `url(${herobg})`,
+        }}>
+
+        {/* left-side Hero */}
+        <div className="left-side flex flex-col justify-center px-16 text-center lg:w-4/5 md:w-1/2 sm:w-2/3 ss:w-4/5 xs:w-4/5 lg:pb-64 md:pb-72 sm:pb-64 ss:pb-72 xs:pb-72 xs:pl-8 sm:me-2  sm:pl-6 ss:pl-4 xxs:pl-2 xxs:pb-64 sm:mr-8 md:text-left sm:text-left sm:text-lg ss:text-left xs:text-left xxs:text-left ">
+
+          <p className=" text-3xl pb-2 md:text-2xl sm:text-2xl ss:text-xl xs:text-sm xxs:text-xs xxs:pb-0 text-opacity-50 uppercase" style={{ fontFamily: "Arimo, sans-serif", fontWeight: 400 }}>{t('left_side_hero.subheading')}</p>
+          <h1 className='text-2xl md:text-3xl sm:text-3xl xs:text-2xl xxs:text-2xl xxs:mb-0 font-bold mb-2'>
+            {t('left_side_hero.heading')}
+          </h1>
+          <p className="  mb-6 lg:text-xl md:text-lg sm:text-sm ss:text-sm xs:text-sm">
+            {t('left_side_hero.description')}
+          </p>
+
+          <button type="button" className="flex text-white text-inline justify-center outline font-medium rounded mb-2 text-sm lg:px-12 lg:py-1.5 lg:me-96 md:px-10 md:py-0.5 md:me-36 sm:px-4 sm:py-1.5 sm:me-20 xs:py-1.5 xs:me-32 xxs:me-20 ">
+            {t('left_side_hero.button_text')}
+          </button>
+
+        </div>
+        {/* Right-side Hero */}
+        <div className="right-side flex lg:mr-40 lg:pb-12 md:w-1/2 sm:2/5">
+          <img src={herologo} alt="" className="h-auto lg:w-full lg:mb-6 md:w-4/5 xxs:w-full md:ml-30 sm:mr-20 sm:pb-80 ss:pb-96 xs:pb-96 xs:pr-6 xxs:pb-72 xxs:mr-40 " />
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default Hero;

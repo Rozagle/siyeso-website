@@ -108,7 +108,7 @@ function Navbar() {
         <nav className="navbar bg-transparent absolute top-0 left-0 right-0 z-10">
             <div className="navigationBar text-white flex justify-between items-center h-16 max-w-[1450px] mx-auto px-5 relative ">
                 <div className="w-36 h-12 relative flex items-center">
-                    <img className="w-25 h-25 mr-2 " alt="" src="/siyeso-navv.svg" />
+                    <img className="w-22 h-22 mr-2 " alt="" src="/siyeso-navv.svg" />
                 </div>
 
                 {/* Menu Icon for Mobile screen */}

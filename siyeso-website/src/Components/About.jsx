@@ -4,6 +4,7 @@ import aboutusimg from '../assets/aboutimg.png';
 import { useTranslation } from 'react-i18next';
 
 
+
 function About() {
   const { t, i18n } = useTranslation();
   const [currentLanguage] = useState(() => localStorage.getItem('selectedLanguage') || 'tr');
@@ -13,18 +14,18 @@ function About() {
   }, [currentLanguage, i18n]);
 
   return (
-
     <div id='about' className='p-2'>
-      <div className='px-4 lg:px-30 max-w-screen-2xl mx-auto my-8'>
+      <div className='px-4 lg:px-30 mx-auto my-8'>
         <div className='md:w-8/10 md:mr-4 mx-auto flex flex-col md:flex-row justify-between items-center'>
-          <div className='lg:w-full md:w-4/5 sm:w-3/5 sm:ml-0 md:ml-0 lg:ml-4 md:mb-0'>
-            <img src={aboutusimg} alt="" className='w-full lg:w-3/4 mx-auto' style={{ maxWidth: '90%', height: 'auto', maxHeight: '400px' }} />
+          <div className='lg:w-full md:w-4/5 sm:w-3/5 sm:ml-0 md:ml-0 lg:ml-4 md:mb-0 relative'>
+            <img src={aboutusimg} alt="" className='w-full lg:w-3/5 mx-auto' style={{ maxWidth: '90%', height: 'auto', maxHeight: '400px' }} />
           </div>
           <div className='md:w-full lg:w-full m-3 lg:pr-12'>
             <h2 className='text-lg md:text-xl mb-1 font-bold text-[#00df9a]'>{t('About.heading')}</h2>
             <h2 className='text-3xl md:text-4xl mb-4'>{t('About.subheading')}</h2>
             <p className='text-base sm:text-lg mb-8'>
-              {t('About.description')}</p>
+              {t('About.description')}
+            </p>
           </div>
         </div>
       </div>
@@ -33,6 +34,3 @@ function About() {
 }
 
 export default About;
-
-
-
