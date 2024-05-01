@@ -1,4 +1,4 @@
-import { Navbar, Hero, Analysis,Develope, Client,  Contect, Footer, OurExpertise, About ,ChangingNeeds } from './Components/Imports';
+import { Navbar, Hero,RequirementExpertise, Analysis,Develope, Client,  Contect, Footer, OurExpertise, About ,ChangingNeeds } from './Components/Imports';
 function App() {
 
   return (
@@ -8,6 +8,7 @@ function App() {
       <ChangingNeeds/>
       {/* <Analysis/>
       <Develope/> */}
+      <RequirementExpertise/>
       <About/>
       <OurExpertise/> 
       <Client/>

@@ -21,10 +21,10 @@ function Client() {
                     <div className='flex space-y-2 flex-col text-center mb-14'>
                         {/* <h2 className='text-lg md:text-lg font-bold text-[#00df9a]'>{t('client.heading1')}</h2> */}
 
-                        <h1 className="md:text-4xl sm:text-3xl text-2xl font-bold text-center mt-8 mb-4 capitalize">
+                        <h1 className="md:text-4xl sm:text-3xl xxs:text-3xl text-2xl font-bold text-center mt-8 mb-4 capitalize">
                             {t('client.heading')}
                         </h1>
-                        <span className='text-2xl'>
+                        <span className='lg:text-3xl md:text-3xl sm:text-3xl xs:text-2xl xxs:text-xl '>
                             {t('client.subheading')}
                         </span>
                     </div>

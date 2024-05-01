@@ -73,7 +73,10 @@
       "subscriptionSuccesstxt2": "Siyeso hakkında güncellemeler alacaksınız"
   },
   "changing": {
-    "imageUrl2": "src/assets/frame2.svg"
+    "imageUrl1": "src/assets/frameTr1.svg",
+    "imageUrl2": "src/assets/frameTr2.svg",
+    "imageUrl3": "src/assets/frameTr3.svg",
+    "imageUrl4": "src/assets/frameTr4.svg"
   }
 
 

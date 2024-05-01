@@ -17,7 +17,7 @@ function About() {
     <div id='about' className='p-2 min-h-[600px] pt-20'>
       <div className='px-4 lg:px-30 mx-auto my-8'>
         <div className='md:w-8/10 md:mr-4 mx-auto flex flex-col md:flex-row justify-between items-center'>
-          <div className='lg:w-full md:w-4/5 sm:w-3/5 sm:ml-0 md:ml-0 lg:ml-4 md:mb-0 relative'>
+          <div className='lg:w-full md:w-4/5 sm:w-3/5 ss:w-3/4  sm:ml-0 md:ml-0 lg:ml-4 md:mb-0 relative'>
             <img src={aboutusimg} alt="" className='w-full lg:w-3/5 mx-auto' style={{ maxWidth: '90%', height: 'auto', maxHeight: '400px' }} />
           </div>
           <div className='md:w-full lg:w-full m-3 lg:pr-12'>

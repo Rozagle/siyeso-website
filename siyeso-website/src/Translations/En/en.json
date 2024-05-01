@@ -71,10 +71,10 @@
       "subscriptionSuccesstxt2":"You will get updates about siyeso"
     },
     "changing": {
-      "imageUrl1": "src/assets/frame1.svg",
-      "imageUrl2": "src/assets/frame2.svg",
-      "imageUrl3": "src/assets/frame3.svg",
-      "imageUrl4": "src/assets/frame4.svg"
+      "imageUrl1": "src/assets/frameEn1.svg",
+      "imageUrl2": "src/assets/frameEn2.svg",
+      "imageUrl3": "src/assets/frameEn3.svg",
+      "imageUrl4": "src/assets/frameEn4.svg"
     }
     
   }
