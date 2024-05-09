@@ -8,9 +8,7 @@ import Team from "./Team";
 import Contect from "./Contect";
 import Footer from "./Footer";
 import ChangingNeeds from "./ChangingNeeds";
-import Develope from "./Develope";
 import RequirementExpertise from "./RequirementExpertise";
-
 
 export {
   Navbar,
@@ -23,6 +21,5 @@ export {
   Footer,
   OurExpertise,
   ChangingNeeds,
-  Develope,
-  RequirementExpertise
+  RequirementExpertise,
 };

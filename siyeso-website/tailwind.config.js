@@ -15,10 +15,9 @@ export default {
         brandprimary: "#4CAF4F",
         netralDgray: "#717171",
       },
-      
     },
     screens: {
-      xxs:"300px",
+      xxs: "300px",
       xs: "480px",
       ss: "620px",
       sm: "768px",
@@ -26,7 +25,9 @@ export default {
       lg: "1200px",
       xl: "1700px",
     },
+    boxShadow: {
+      "3xl": "0px 10px 50px 0px rgba(0,0,0,0.15)",
+    },
   },
   plugins: [],
 };
-

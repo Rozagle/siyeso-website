@@ -1,4 +1,4 @@
-import { Navbar, Hero,RequirementExpertise, Analysis,Develope, Client,  Contect, Footer, OurExpertise, About ,ChangingNeeds } from './Components/Imports';
+import { Navbar, Hero,RequirementExpertise, Client,  Contect, Footer, OurExpertise, About, Team ,ChangingNeeds } from './Components/Imports';
 function App() {
 
   return (

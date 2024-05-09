@@ -1,77 +1,150 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useRef, useState } from 'react';
-import team1 from '../assets/team1.jpg';
-
-const data = [
-  {
-    name: "naci be1y",
-    img: team1,
-    review: "manager designer"
-  },
-  {
-    name: "naci bey2",
-    img: team1,
-    review: "manager designer"
-  },
-  {
-    name: "naci bey3",
-    img: team1,
-    review: "manager designer"
-  },
-  {
-    name: "naci bey4",
-    img: team1,
-    review: "manager designer"
-  },
-  {
-    name: "naci bey5",
-    img: team1,
-    review: "manager designer"
-  },
-  {
-    name: "naci bey6",
-    img: team1,
-    review: "manager designer"
-  },
-
-]
+import React from "react";
+import Slider from "react-slick";
+import PropTypes from 'prop-types';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+// import Team1 from '../assets/team1.jpg';
+// import Team2 from '../assets/team2.jpg';
+import Team3 from '../assets/team3.jpg';
+// import Team4 from '../assets/team4.jpg';
+// import Team5 from '../assets/team5.jpg';
+import Team6 from '../assets/team6.jpg';
+// import Team7 from '../assets/team7.jpg';
 
 function Team() {
+  const teamImages = [ Team3, Team6];
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1700,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 1
+        }
+      },
+      {
+        breakpoint: 620,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1
+        }
+      },
+      {
+        breakpoint: 300,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1
+        }
+      }
+    ]
+  };
 
 
   return (
-    <div id='team' className="w-full min-h-[600px] flex flex-col justify-center items-center text-neutral-700 bg-gray-500 ">
+    <div id='team' className="slider-container min-h-[500px] justify-center items-center text-neutral-700">
 
       <div className='flex space-y-2 flex-col text-center mb-14'>
-        <h1 className="md:text-4xl sm:text-3xl text-2xl font-bold text-center mt-8 mb-4 capitalize">
-          our Team
+        <h1 className="md:text-4xl sm:text-3xl xxs:text-3xl text-2xl font-bold text-center mt-8 mb-4 capitalize">
+          Our Teams
         </h1>
-        <span className='text-2xl'>
-          Meet with our team
-        </span>
       </div>
-      <section className="swiper-container mySwiper">
-        <div className="swiper-wrapper w-full h-96 flex items-center">          {data.map((d, index) => (
-          <div key={index} className=" w-80 h-100 bg-white rounded-xl shadow-lg p-6 flex items-center flex-col mx-8">
-            <div className="bg-white text-black rounded-xl flex flex-col justify-center items-center">
-              <div className="w-40 h-40 border-4 border-solid border-purple-600 rounded-full p-1 mb-4">
-                <img src={d.img} alt="" className="w-full h-full rounded-full object-cover" />
-              </div>
-              <div className="flex flex-col justify-center items-center gap-4 p-4">
-                <p className="text-2xl font-semibold relative top-1">{d.name}</p>
-                <p className="text-lg text-center mb-4">{d.review}</p>
-              </div>
+
+      <Slider {...settings} className="pb-4">
+        {teamImages.map((image, index) => (
+          <div key={index} className="slider-item">
+            <img src={image} alt="" className="w-140 h-140 object-cover" />
+            <div className="text-container">
+              <span className="category">proje yonetimi</span>
+              <span className="title">Cheat Sheet</span>
             </div>
           </div>
         ))}
-        </div>
-      </section>
+      </Slider>
 
-
-
-    </div >
+    </div>
   );
 }
 
-export default Team;
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "red" }}
+      onClick={onClick}
+    />
+  );
+}
 
+SampleNextArrow.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
+  onClick: PropTypes.func,
+};
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "green" }}
+      onClick={onClick}
+    />
+  );
+}
+
+SamplePrevArrow.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
+  onClick: PropTypes.func,
+};
+
+export default Team;
