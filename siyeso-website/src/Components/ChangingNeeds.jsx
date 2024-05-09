@@ -22,16 +22,16 @@ function ChangingNeeds() {
         
         <div className="grid lg:grid-cols-12 sm:grid-cols-12 xs:grid-cols-1 xxs:grid-cols-1 gap-4">
           <div className="lg:col-span-8  sm:col-span-8  xs:col-span-8 xxs:col-span-8 ">
-          <img src={`/siyeso-website_latest/${changingImages.imageUrl1}`} alt="" className="lg:w-full md:w-3/4 ss:w-full h-auto" />
+          <img src={`${changingImages.imageUrl1}`} alt="" className="lg:w-full md:w-3/4 ss:w-full h-auto" />
           </div>
           <div className="col-span-4  sm:col-span-4">
-            <img  src={`/siyeso-website_latest/${changingImages.imageUrl2}`} alt="" className="lg:w-full md:w-3/4 ss:w-full h-auto lg:mt-12 sm:mt-11 sm:ml-3 ss:ml-7 xs:ml-16 xxs:ml-6" />
+            <img  src={`${changingImages.imageUrl2}`} alt="" className="lg:w-full md:w-3/4 ss:w-full h-auto lg:mt-12 sm:mt-11 sm:ml-3 ss:ml-7 xs:ml-16 xxs:ml-6" />
           </div>
           <div className="col-span-6  sm:col-span-4">
-            <img  src={`/siyeso-website_latest/${changingImages.imageUrl4}`} alt="" className="lg:w-full ss:w-full h-auto lg:mt-1 lg:ml-2 sm:mt-2 sm:ml-3 ss:ml-4 xs:ml-6 xxs:ml-2" />
+            <img  src={`${changingImages.imageUrl4}`} alt="" className="lg:w-full ss:w-full h-auto lg:mt-1 lg:ml-2 sm:mt-2 sm:ml-3 ss:ml-4 xs:ml-6 xxs:ml-2" />
           </div>
           <div className="col-span-6  sm:col-span-8">
-            <img  src={`/siyeso-website_latest/${changingImages.imageUrl3}`} alt="" className="lg:w-full h-auto lg:mt-1 sm:mt-2 ss:ml-4 xs:ml-2 xxs:ml-2" />
+            <img  src={`${changingImages.imageUrl3}`} alt="" className="lg:w-full h-auto lg:mt-1 sm:mt-2 ss:ml-4 xs:ml-2 xxs:ml-2" />
           </div>
         </div>
 
